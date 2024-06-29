@@ -3,14 +3,14 @@ import cv2
 from moviepy.editor import VideoFileClip, AudioFileClip
 
 # Load - specify MP4
-cap = cv2.VideoCapture('C:\\Users\\tokyo\\Downloads\\DJI.mp4')
+cap = cv2.VideoCapture("C:\\pathadd\\~.mp4")
 fps    = cap.get(cv2.CAP_PROP_FPS)
 height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
 width  = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
 
 # Specify output format-MP4
 fourcc = cv2.VideoWriter_fourcc('m', 'p', 'g' , '4')
-out = cv2.VideoWriter("C:\\Users\\tokyo\\Downloads\\DJIsss.mp4",int(fourcc), fps, (int(width), int(height)))
+out = cv2.VideoWriter("C:\\pathadd\\making\\.mp4",int(fourcc), fps, (int(width), int(height)))
 
 while(cap.isOpened()):
 	try:
@@ -28,13 +28,13 @@ cv2.destroyAllWindows()
 
 # Add audio using moviepy
 # Import video files without audio
-video_clip = VideoFileClip("C:\\Users\\tokyo\\Downloads\\DJIsss.mp4")
+video_clip = VideoFileClip("C:\\pathadd\\making\\.mp4")
 # Load audio file(path)
-audio_clip = AudioFileClip('C:\\Users\\tokyo\\Downloads\\DJI.mp4') 
+audio_clip = AudioFileClip("C:\\pathadd\\~.mp4") 
 # Set audio to video clip
 video_clip = video_clip.set_audio(audio_clip)
 # Save as video file with audio
-video_clip.write_videofile('C:\\Users\\tokyo\\Downloads\\DJIOK.mp4')
+video_clip.write_videofile('C:\\pathadd\\making_complete.mp4')
 
 
 
