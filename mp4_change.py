@@ -3,7 +3,7 @@ import cv2
 from moviepy.editor import VideoFileClip, AudioFileClip
 
 # Load - specify MP4
-cap = cv2.VideoCapture("C:\\pathad\\~.mp4")
+cap = cv2.VideoCapture("C:\\pathadd\\~.mp4")
 fps    = cap.get(cv2.CAP_PROP_FPS)
 height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
 width  = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
@@ -30,7 +30,7 @@ cv2.destroyAllWindows()
 # Import video files without audio
 video_clip = VideoFileClip("C:\\pathadd\\making\\.mp4")
 # Load audio file(path)
-audio_clip = AudioFileClip("C:\\pathad\\~.mp4") 
+audio_clip = AudioFileClip("C:\\pathadd\\~.mp4") 
 # Set audio to video clip
 video_clip = video_clip.set_audio(audio_clip)
 # Save as video file with audio
